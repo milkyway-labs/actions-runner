@@ -1,0 +1,14 @@
+name: runner-test
+
+services:
+
+  actions-runner:
+    image: actions-runner
+    restart: unless-stopped
+    user: "$UID:$GID"
+    environment:
+      - RUNNER_ALLOW_RUNASROOT=1
+      - PAT=
+      - ORG=
+    deploy:
+      replicas: 2
