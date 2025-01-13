@@ -1,4 +1,4 @@
-name: runner-test
+name: actions-runner
 
 services:
 
