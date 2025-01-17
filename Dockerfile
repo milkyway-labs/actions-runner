@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 
 RUN apt update && apt upgrade -y
-RUN apt install make jq wget curl git libicu-dev -y
+RUN apt install make jq wget curl git libicu-dev gcc build-essential -y
 
 RUN mkdir -p /actions-runner
 
