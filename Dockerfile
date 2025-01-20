@@ -9,12 +9,13 @@ RUN mkdir -p /actions-runner
 
 COPY start.sh /actions-runner/start.sh
 
+RUN chown -R runner:runner /actions-runner
+USER runner
+
 WORKDIR /actions-runner
 
 RUN curl -o actions-runner-linux-x64-2.321.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.321.0/actions-runner-linux-x64-2.321.0.tar.gz
 
 RUN tar xzf ./actions-runner-linux-x64-2.321.0.tar.gz
-
-USER runner
 
 ENTRYPOINT ["/actions-runner/start.sh"]
