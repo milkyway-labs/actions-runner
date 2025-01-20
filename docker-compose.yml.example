@@ -4,6 +4,8 @@ services:
     image: actions-runner
     restart: unless-stopped
     user: "$UID:$GID"
+	volumes:
+	  - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - RUNNER_ALLOW_RUNASROOT=1
       - PAT=
