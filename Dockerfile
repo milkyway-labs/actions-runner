@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV ARCH=arm64
+ENV ARCH=amd64
 ENV GO_VERSION=1.23.5
 
 # Install dependencies
