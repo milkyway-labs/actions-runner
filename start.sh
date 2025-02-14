@@ -29,6 +29,8 @@ run() {
 	./config.sh --unattended --url https://github.com/${ORG} --token $token --ephemeral
 
 	./run.sh
+
+    ./config.sh remove --token $token
 }
 
 echo "Starting runner..."
